@@ -14,3 +14,14 @@ git push<br>
 <p>
 其实按照上面的步骤多少还是有点问题，比如git pull或者git push的时候，可能会报错，目前推测是墙的问题（不然不会有时可以有时不可以)，也可能是ssh的问题，但是ssh我是很久之前配置的了，现在已经忘了怎么弄得当时，这个问题暂时留着。
 </p>
+<p>
+奇怪的错误再次发生，使用git clone + url时，报以下错:
+<code>
+OpenSSL SSL_read: Connection was reset, errno 10054
+</code>
+以及
+<code>
+ Failed to connect to github.com port 443: Timed out
+</code>
+呵呵哒，百分百跟防火墙有关系，虽然报错但是最终还是clone上去了，头疼。
+</p>
