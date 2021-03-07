@@ -16,12 +16,35 @@ git push<br>
 </p>
 <p>
 奇怪的错误再次发生，使用git clone + url时，报以下错:
-<code>
+<pre>
 OpenSSL SSL_read: Connection was reset, errno 10054
-</code>
+</pre>
 以及
-<code>
+<pre>
  Failed to connect to github.com port 443: Timed out
-</code>
-呵呵哒，百分百跟防火墙有关系，虽然报错但是最终还是clone上去了，头疼。
+</pre>
+呵呵哒，百分百跟防火墙有关系，虽然报错但是最终还是clone上去了，头疼。目前来看用管理员权限打开命令行是可以用的。
+</p>
+<p>
+今天又遇到一个问题，明明是自己建的仓库自己commit的，但是在github上面显示commit的账户是我之前的账号，有点头疼
+</p>
+<p>
+<img src="./images/git_problem.png" width="300px" height="200px">
+</p>
+<p>
+使用以下代码查看自己git绑定的账户，可以看到:
+<pre>
+git config user.name
+git config user.email
+</pre>
+绑定的其实还是之前的账户，更新之后:
+<pre>
+git config --global user.name "zhangsan(新的用户名)"
+git config --global user.email "123456@qq.com(新的邮箱)"
+git config --global user.password "123456(新的密码)"
+# 这里的zhangsan和邮箱都是你修改之后的用户名和邮箱
+</pre>
+</p>
+<p>
+再次尝试，发现没有问题了。
 </p>
