@@ -48,3 +48,9 @@ git config --global user.password "123456(新的密码)"
 <p>
 再次尝试，发现没有问题了。
 </p>
+<hr>
+<p>今天发现git是无法上传空目录的，因此如果想上传空目录，必须要在空目录中新建一个无关文件</p>
+<hr>
+<p>github中要删除仓库，可以打开该仓库，然后点右边的settings(注意是insights旁边的settings),然后一直划到最下面点击delete并且输入验证码就可以了。</p>
+<hr>
+<p>github要查看提交记录也非常简单，直接点旁边的数字+commits选项就可以看到了</p>
